@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya&family=Alegreya+Sans:wght@300;400;500&family=Amatic+SC:wght@400;700&family=Inter:wght@200;300;400;500&family=Mina:wght@400;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,500;1,300;1,400&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik+Scribble&family=Shadows+Into+Light&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href=
+    "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+    
+    <div class="container-fluid bookmarkContainer ">
+        <div class="headerContainer text-center">
+            <h1>Bookmarker</h1>
+        </div>
+        <div class="row formContainer">
+        <div class="col">
+            <div class="text-center">
+                <h5>Bookmark You Favorite Sites!</h5>
+            </div>
+            <form>
+                <div class="mb-3">
+                  <label for="siteName" class="form-label"><i class="bi bi-journal-bookmark-fill"></i> Site Name</label>
+                  <input type="text" oninput="validateName()" class="form-control " id="siteName">
+                  <small class="text-danger d-none" id="nameComment">Site Name must be at least 4 letters and begins with a capital letter.</small>
+                </div>
+                <div class="mb-3">
+                  <label for="siteURL" class="form-label"><i class="fa fa-link" aria-hidden="true"></i> Site URL</label>
+                  <input type="text" oninput="validateUrl()" class="form-control" id="siteURL">
+                  <small class="text-danger d-none" id="urlComment">Site URL is invalid.</small>
+                
+                </div>
+                <div class="text-center">
+                    <button type="button" onclick="saveSite()" class="btn btn-primary">Submit</button>
+                </div>
+                
+              </form>
+        </div>
+        <div class="bookmark">
+            <img src="Images/bookmark-icon-12323.png"/>
+            <!-- <i class="bi bi-bookmark-fill"></i> -->
+        </div>
+      </div>
+      <div class="row tableContainer text-center">
+        <div class="col">
+            <table class="table bg-black">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th> 
+                    </tr>
+                    
+                </thead>
+                <tbody id="tableBody">
+                    
+                </tbody>
+            </table>
+        </div>
+      </div>
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
